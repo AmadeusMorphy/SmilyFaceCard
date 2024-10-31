@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css">                  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+    animation: float 4s ease-in-out infinite;
+    background-color: blueviolet;
+    border-radius: 30px;
+    transition: 0.2s ease-in-out;
+    height: 10rem;
+    width: 10rem;
+    box-shadow: -0px 10px 10px;
+    animation: moving-face-shadow 20s ease-in-out infinite;
+
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    height: 11rem;
+    width: 11rem;
+}
+
+.smile {
+    width: 38px;
+    height: 27px;
+    background-color: #fff;
+    border-radius: 0 0 100px 100px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+
+
+.eyeL,
+.eyeR {
+    background-color: white;
+    border-radius: 50px;
+    height: 3rem;
+    animation: float-eyes 5s ease-in-out infinite;
+}
+
+
+
+.face {
+    margin-left: 0px;
+    margin-right: 0px;
+    animation: float-face 5s ease-in-out infinite;
+    animation: moving-face 20s ease-in-out infinite;
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 10px;
+    }
+
+}
+
+@keyframes float-eyes {
+
+    95% {
+        height: 3rem;
+    }
+
+    97% {
+        height: 0rem;
+    }
+
+    100% {
+        height: 3rem;
+    }
+}
+
+@keyframes float-face {
+
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 10px;
+    }
+
+}
+
+@keyframes moving-face {
+    10%, 12%  {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    15%, 25%  {
+        margin-right: 40px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    28%, 35% {
+        margin-top: 20px;
+        margin-right: 0;
+        margin-left: 40px;
+    }
+
+    
+
+    38%, 45% {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    48%, 53% {
+        margin-top: 25px;
+        margin-right: 40px;
+        margin-left: 0px;
+
+    }
+
+    58%, 80% {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 40px;
+        margin-bottom: 20px;
+
+    }
+
+    83%, 100% {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+    } 
+}
+
+@keyframes moving-face-shadow {
+    10%, 12%  {
+        box-shadow: -0px 10px 10px;
+    }
+
+    15%, 25%  {
+        box-shadow: 10px 10px 10px;
+    }
+    28%, 35% {
+        box-shadow: -19px -20px 10px;
+    }
+
+    
+
+    38%, 45% {
+        box-shadow: -0px 10px 10px;
+
+    }
+
+    48%, 53% {
+     
+    box-shadow: 12px -13px 19px;
+
+
+    }
+
+    58%, 80% {
+        box-shadow: -10px 10px 10px;
+
+    }
+
+    83%, 100% {
+        box-shadow: -0px 10px 10px;
+
+    } 
+}
+
+@keyframes moving-face-eye-size {
+    10%, 12%  {
+        height: 3rem;
+    }
+
+    15%, 25%  {
+        height: 2rem;
+    }
+    28%, 35% {
+        height: 3rem;
+    }
+
+    
+
+    38%, 45% {
+        height: 3rem;
+    }
+
+    48%, 53% {
+        height: 3rem;
+
+
+    }
+
+    58%, 80% {
+        height: 3rem;
+
+
+    }
+
+    83%, 100% {
+        height: 3rem;
+
+    } 
+}
+
+    </style>
+</head>
+<body>
+    <div class="containter flex justify-content-center align-items-center h-screen">
+        <div class="card grid justify-content-center align-items-center">
+            <div class="face grid justify-content-center align-items-center h-10rem w-10rem">
+                <div class="eyes flex justify-content-center justify-content-around w-full">
+                    <div class="eyeL w-1rem"></div>
+                    <div class="eyeR w-1rem"></div>
+                </div>
+                <div class="">
+                    <div class="smile"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
